@@ -1,6 +1,5 @@
-PACKER-ARGS=-b -y -a -p ./preamble.txt
+PACKER-ARGS=-b -y -a #-p ./preamble.txt
 # -l ./license.txt
-
 # By default, Make treats a target as the output filename. We need to mark every subfolder as "phony", because otherwise, it'll just say there is nothing to do and exit.
 .PHONY: ./*
 
@@ -11,6 +10,7 @@ default: 3d-album-view \
 	lyrics-font-size \
 	output-now-playing-to-file \
 	restore-beta-icons \
+	set-date-added \
 	split-artists-from-title \
 	split-multi-value-fields \
 	sqleditor \
@@ -39,6 +39,9 @@ output-now-playing-to-file:
 
 restore-beta-icons:
 	pack-mmip $@ "Restore Beta Icons" $(PACKER-ARGS)
+
+set-date-added:
+	pack-mmip $@ "Set Date Added" $(PACKER-ARGS)
 
 split-artists-from-title:
 	pack-mmip $@ "Split Artists from Title" $(PACKER-ARGS)

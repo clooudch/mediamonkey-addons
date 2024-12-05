@@ -1,0 +1,8 @@
+{
+    "title": "Set Date Added",
+    "id": "setDateAdded",
+    "description": "Allows setting the date added.",
+    "version": "1.0.0",
+    "author": "Claudio Frei",
+    "type": "metadata"
+}
